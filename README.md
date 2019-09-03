@@ -2,6 +2,8 @@
 
 Adds several new classes to allow for more character progression. Progression in each class requires two different attributes and the classes are themed to match those attributes.
 
+Each tier of a class is unlocked at player levels 50, 60, 70, 80 and 100.
+
 ## Classes
 
 ### Sergeant (Strength/Perception)
