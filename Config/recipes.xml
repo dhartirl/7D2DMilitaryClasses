@@ -1,0 +1,42 @@
+<configs>
+
+    <append xpath="/recipes">
+
+        <recipe name="meleeToolSledgehammerSteel" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="resourceForgedSteel" count="50"/>
+            <ingredient name="resourceWood" count="10"/>
+        </recipe>
+
+        <recipe name="armorRebarBoots" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="rebarFrameBlock" count="4"/>
+            <ingredient name="resourceConcreteMix" count="100"/>
+            <ingredient name="resourceLeather" count="4"/>
+        </recipe>
+
+        <recipe name="armorRebarChest" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="rebarFrameBlock" count="4"/>
+            <ingredient name="resourceConcreteMix" count="100"/>
+            <ingredient name="resourceLeather" count="4"/>
+        </recipe>
+
+        <recipe name="armorRebarGloves" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="rebarFrameBlock" count="4"/>
+            <ingredient name="resourceConcreteMix" count="100"/>
+            <ingredient name="resourceLeather" count="4"/>
+        </recipe>
+
+        <recipe name="armorRebarHelmet" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="rebarFrameBlock" count="4"/>
+            <ingredient name="resourceConcreteMix" count="100"/>
+            <ingredient name="resourceLeather" count="4"/>
+        </recipe>
+
+        <recipe name="armorRebarLegs" count="1" craft_area="workbench" tags="learnable">
+            <ingredient name="rebarFrameBlock" count="4"/>
+            <ingredient name="resourceConcreteMix" count="100"/>
+            <ingredient name="resourceLeather" count="4"/>
+        </recipe>
+
+    </append>
+
+</configs>

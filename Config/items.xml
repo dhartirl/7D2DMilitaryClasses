@@ -1,0 +1,248 @@
+<configs>
+
+    <append xpath="/items">
+        
+        <!-- Rebar Armor (Juggernaut) -->
+        <item name="armorRebarMaster">
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="armorSteelHelmet"/>
+            <property name="DisplayType" value="armor"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="RepairTools" value="resourceConcreteMix"/>
+            <property name="DegradationBreaksAfter" value="false"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
+            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+            <property name="DescriptionKey" value="armorRebarGroupDesc"/>
+            <property name="Group" value="Clothing"/>
+            <property name="ActionSkillGroup" value="Clothing/Armor"/>
+            <property name="CraftingSkillGroup" value="craftSkillArmor"/>
+            <property name="RepairExpMultiplier" value="10.8"/>
+            <property name="EconomicValue" value="800"/>
+        </item>
+
+        <item name="armorRebarHelmet">
+            <property name="Extends" value="armorRebarMaster" param1="CustomIcon"/>
+            <property name="Tags" value="head,armor,armorHead,heavyarmor"/>
+            <property name="CustomIcon" value="armorSteelHelmet"/>
+            <property name="CustomIconTint" value="ffca88"/>
+            <property name="EquipSlot" value="Head"/>
+            <effect_group>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="ElementalDamageResist" operation="base_subtract" value="1" tags="head,heat,electrical"/>
+                <passive_effect name="HyperthermalResist" operation="base_subtract" value="1"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6"/>
+
+                <passive_effect name="Mobility" operation="perc_subtract" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.07" tags="walking"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.15" tags="running"/>
+                <display_value name="dStaminaChangeOT" value="-.15"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="0.5" />
+                <passive_effect name="BuffResistance" operation="base_add" value="0.09" tags="buffIllInfection0,buffInjuryBleeding,buffInjuryStunned1"/>
+            </effect_group>
+
+            <property class="UMA">
+                <property name="Mesh" value="armor_iron_helmet"/>
+                <property name="Overlay0" value="armor_iron_helmet"/>
+                <property name="Overlay0Tint" value="ffca88"/>
+                <property name="Layer" value="middle"/>
+                <property name="UISlot" value="Headgear"/>
+                <property name="Mask1" value="Head" param1="inner"/>
+                <property name="Mask3" value="Face" param1="inner"/>
+                <property name="Mask4" value="Face" param1="middle"/>
+                <property name="Mask5" value="Face" param1="outer"/>
+                <property name="Mask7" value="Eyes" param1="inner"/>
+                <property name="Mask8" value="Eyes" param1="middle"/>
+                <property name="Mask9" value="Eyes" param1="outer"/>
+            </property>
+        </item>
+
+        <item name="armorRebarChest">
+            <property name="Extends" value="armorRebarMaster" param1="CustomIcon"/>
+            <property name="Tags" value="upperbody,chest,armor,armorChest,heavyarmor"/>
+            <property name="CustomIcon" value="armorSteelChest"/>
+            <property name="CustomIconTint" value="ffca88"/>
+            <property name="EquipSlot" value="Chest"/>
+            <effect_group>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="ElementalDamageResist" operation="base_subtract" value="1" tags="upperbody,heat,electrical"/>
+                <passive_effect name="HyperthermalResist" operation="base_subtract" value="1"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6"/>
+
+                <passive_effect name="Mobility" operation="perc_subtract" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.07" tags="walking"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.15" tags="running"/>
+                <display_value name="dStaminaChangeOT" value="-.9"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="0.5" />
+                <passive_effect name="BuffResistance" operation="base_add" value="0.09" tags="buffIllInfection0,buffInjuryBleeding,buffInjuryStunned1"/>
+            </effect_group>
+
+            <property class="UMA">
+                <property name="Mesh" value="armor_iron_chest"/>
+                <property name="Overlay0" value="armor_iron_chest"/>
+                <property name="Overlay0Tint" value="ffca88"/>
+                <property name="Layer" value="2"/>
+                <property name="UISlot" value="ChestArmor"/>
+            </property>
+        </item>
+
+        <item name="armorRebarGloves">
+            <property name="Extends" value="armorRebarMaster" param1="CustomIcon"/>
+            <property name="Tags" value="upperbody,hands,armor,armorHands,heavyarmor"/>
+            <property name="CustomIcon" value="armorSteelGloves"/>
+            <property name="CustomIconTint" value="ffca88"/>
+            <property name="EquipSlot" value="Hands"/>
+            <effect_group>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="ElementalDamageResist" operation="base_subtract" value="1" tags="upperbody,heat,electrical"/>
+                <passive_effect name="HyperthermalResist" operation="base_subtract" value="1"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6"/>
+
+                <passive_effect name="Mobility" operation="perc_subtract" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.07" tags="walking"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.15" tags="running"/>
+                <display_value name="dStaminaChangeOT" value="-.9"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="0.5" />
+                <passive_effect name="BuffResistance" operation="base_add" value="0.09" tags="buffIllInfection0,buffInjuryBleeding,buffInjuryStunned1"/>
+            </effect_group>
+
+            <property class="UMA">
+                <property name="Mesh" value="armor_iron_gloves"/>
+                <property name="Overlay0" value="armor_iron_gloves"/>
+                <property name="Overlay0Tint" value="ffca88"/>
+                <property name="Layer" value="0"/>
+                <property name="UISlot" value="Gloves"/>
+            </property>
+        </item>
+
+        <item name="armorRebarLegs">
+            <property name="Extends" value="armorRebarMaster" param1="CustomIcon"/>
+            <property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyarmor"/>
+            <property name="CustomIcon" value="armorSteelLegs"/>
+            <property name="CustomIconTint" value="ffca88"/>
+            <property name="EquipSlot" value="Legs"/>
+            <effect_group>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="ElementalDamageResist" operation="base_subtract" value="1" tags="lowerbody,heat,electrical"/>
+                <passive_effect name="HyperthermalResist" operation="base_subtract" value="1"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="0.5" />
+                <passive_effect name="Mobility" operation="perc_subtract" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.07" tags="walking"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.15" tags="running"/>
+                <display_value name="dStaminaChangeOT" value="-.9"/>
+
+                <passive_effect name="BuffResistance" operation="base_add" value="0.09" tags="buffIllInfection0,buffInjuryBleeding,buffInjuryStunned1"/>
+            </effect_group>
+
+            <property class="UMA">
+                <property name="Mesh" value="armor_iron_pants"/>
+                <property name="Overlay0" value="armor_iron_pants"/>
+                <property name="Overlay0Tint" value="ffca88"/>
+                <property name="Layer" value="3"/>
+                <property name="UISlot" value="LegArmor"/>
+            </property>
+        </item>
+
+        <item name="armorRebarBoots">
+            <property name="Extends" value="armorRebarMaster" param1="CustomIcon"/>
+            <property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyarmor"/>
+            <property name="CustomIcon" value="armorSteelBoots"/>
+            <property name="CustomIconTint" value="ffca88"/>
+            <property name="EquipSlot" value="Feet"/>
+            <effect_group>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+                <passive_effect name="ElementalDamageResist" operation="base_subtract" value="1" tags="lowerbody,heat,electrical"/>
+                <passive_effect name="HyperthermalResist" operation="base_subtract" value="1"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="500,1000" tier="1,6"/>
+
+                <passive_effect name="Mobility" operation="perc_subtract" value="0.25"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.07" tags="walking"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_subtract" value="0.15" tags="running"/>
+                <display_value name="dStaminaChangeOT" value="-.9"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="0.5" />
+                <passive_effect name="BuffResistance" operation="base_add" value="0.09" tags="buffIllInfection0,buffInjuryBleeding,buffInjuryStunned1"/>
+            </effect_group>
+
+            <property class="UMA">
+                <property name="Mesh" value="armor_iron_boots"/>
+                <property name="Overlay0" value="armor_iron_boots"/>
+                <property name="Overlay0Tint" value="ffca88"/>
+                <property name="Layer" value="3"/>
+                <property name="UISlot" value="Footwear"/>
+            </property>
+        </item>
+
+        <!-- Steel Sledgehammer (Juggernaut) -->
+        <item name="meleeToolSledgehammerSteel">
+            <property name="Tags" value="blunt,melee,heavy,sledge,weapon,meleeWeapon,perkHeavyMetal"/>
+            <property name="CustomIcon" value="meleeToolSledgehammer"/>
+            <property name="CustomIconTint" value="eaeaea"/>
+            <property name="DisplayType" value="melee"/>
+            <property name="HoldType" value="33"/>
+            <property name="Meshfile" value="Items/Tools/sledgehammer_steelPrefab"/>
+            <property name="Material" value="Mmetal"/>
+            <property name="RepairTools" value="resourceForgedSteel"/>
+            <property name="DegradationBreaksAfter" value="false"/>
+            <property name="SoundJammed" value="ItemNeedsRepair"/>
+            <property name="SoundDestroy" value="metaldestroy1"/>
+            <property name="FuelValue" value="250"/>
+            <property name="EconomicValue" value="500"/>
+            <property name="CritChance" value="0.4"/>
+            <property name="Group" value="Ammo/Weapons,Tools/Traps"/>
+            <property name="ActionSkillGroup" value="Blunt Weapons"/>
+            <property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+
+            <property class="Action0">
+                <property name="Class" value="DynamicMelee"/>
+                <property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+                <property name="Sound_start" value="SlowSwoosh"/>
+                <property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+            </property>
+            <property class="Action1">
+                <property name="Class" value="DynamicMelee"/>
+                <property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+                <property name="Sound_start" value="SlowSwoosh"/>
+                <property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+                <property name="UsePowerAttackAnimation" value="true"/>
+            </property>
+            <effect_group name="Base Effects">
+                <passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+                <passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+                <passive_effect name="EntityDamage" operation="base_set" value="55"/> <!-- meleeToolSledgehammer -->
+                <passive_effect name="BlockDamage" operation="base_set" value="100"/>
+                <passive_effect name="AttacksPerMinute" operation="base_set" value="34"/> <!-- A16 1.8 -->
+                <passive_effect name="StaminaLoss" operation="base_set" value="27.6" tags="primary"/>
+                <passive_effect name="DegradationMax" operation="base_set" value="200,800" tier="1,6"/>
+                <passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+                <passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+                <passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+                <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+                <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+                <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+            </effect_group>
+            <effect_group name="Power Attack">
+                <passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+                <passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+                <passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
+                <passive_effect name="StaminaLoss" operation="base_add" value="55" tags="secondary"/>
+                <triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+                    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="80"/>
+                    <requirement name="IsMale" target="self"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+                    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="80"/>
+                    <requirement name="IsMale" target="self" invert="true"/>
+                </triggered_effect>
+            </effect_group>
+        </item>
+
+    </append>
+
+</configs>
