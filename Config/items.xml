@@ -1,5 +1,34 @@
 <configs>
 
+    <!-- Ores -->
+    <append xpath="/items">
+        <item name="resourceCopperPowder">
+            <property name="CustomIcon" value="resourcePotassiumNitratePowder"/>
+            <property name="CustomIconTint" value="FFA63D"/>
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
+            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Mcopper"/>
+            <property name="Stacknumber" value="6000"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="CraftingIngredientTime" value="2"/>
+        </item>
+        <item name="resourceZincPowder">
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
+            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Mzinc"/>
+            <property name="Stacknumber" value="6000"/>
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="CraftingIngredientTime" value="2"/>
+        </item>
+    </append>
+
+    <!-- Juggernaut Items -->
     <append xpath="/items">
         
         <!-- Rebar Armor (Juggernaut) -->
@@ -244,5 +273,45 @@
         </item>
 
     </append>
+
+
+    <!-- Medic Items -->
+    <append xpath="/items">
+        <item name="traumaBlanket">
+            <property name="DisplayType" value="medical"/>
+            <property name="HoldType" value="16"/>
+            <property name="Meshfile" value="Items/Health/gauze"/>
+            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Mcloth"/>
+            <property name="Stacknumber" value="10"/> <!-- STK medical -->
+            <property name="FuelValue" value="1"/>
+            <property name="Weight" value="5"/>
+            <property name="EconomicValue" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_bandage"/>
+            </property>
+            <property class="Action1">
+                <property name="Class" value="UseOther"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_bandage"/>
+            </property>
+            <property name="Group" value="Science"/>
+            <property name="DescriptionKey" value="medicalBandageDesc"/>
+            <property name="ActionSkillGroup" value="Medicine"/>
+            <property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+            <property name="PickupJournalEntry" value="firstAidTip"/>
+
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffNearDeathTrauma"/>
+                <triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffNearDeathTrauma"/>
+            </effect_group>
+
+        </item>
+    </append>
+
 
 </configs>

@@ -2,6 +2,11 @@
 
     <append xpath="/recipes">
 
+        <recipe name="resourceScrapBrass" count="1" craft_area="chemistryStation">
+            <ingredient name="resourceCopperPowder" count="5"/>
+            <ingredient name="resourceZincPowder" count="5"/>
+        </recipe>
+
         <recipe name="meleeToolSledgehammerSteel" count="1" craft_area="workbench" tags="learnable">
             <ingredient name="resourceForgedSteel" count="50"/>
             <ingredient name="resourceWood" count="10"/>

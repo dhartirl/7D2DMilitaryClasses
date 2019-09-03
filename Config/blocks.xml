@@ -1,0 +1,22 @@
+<configs>
+    <append xpath="/blocks">
+
+        <block name="terrOreCopper">
+            <property name="Material" value="Mcopper"/>
+            <property name="Shape" value="Terrain"/>
+            <property name="Mesh" value="terrain"/>
+            <property name="Texture" value="10"/>
+            <property name="ImposterExclude" value="true"/>
+            <drop event="Harvest" name="resourceCopperPowder" count="33" tag="oreWoodHarvest"/>
+            <drop event="Harvest" name="resourceRockSmall" count="16" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <drop event="Fall" name="resourceCopperPowder" count="22" prob="0.5" stick_chance="0"/>
+            <property name="CanMobsSpawnOn" value="true"/>
+            <property name="FilterTags" value="fterrain"/>
+            <property name="SortOrder1" value="d0l0"/>
+            <property name="SortOrder2" value="0050"/>
+            <property name="DisplayType" value="blockTerrain" />
+        </block>
+
+    </append>
+</configs>
