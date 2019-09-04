@@ -93,16 +93,16 @@ The medic is clearly not a doctor, but you know what they say about beggars and 
 
 * Professional Opinion - You and all nearby allies heal for 1hp every 5 seconds
 * Trauma Soother - Craft Trauma Blankets, which can be used to comfort allies and negate near-death trauma
+* Breaking Bad - Craft advanced stimulants that last longer and have stronger effects
 * 
-* 
-* 
+* Doctor on Call - Craft the healing drone, which heals all nearby allies for 200hp over 10 seconds when placed
 
-### Hacker (Intelligence/Perception)
+### Trapper (Intelligence/Perception)
 
-The term "hacker" may evoke images of men wearing balaclavas while using a laptop, but what it truly represents is a fundamental way of thinking about the world. Hackers can take any system and consider the edge cases; the breaking points; the lynchpins that keeps the whole thing running. Every time they walk into a building, their eyes flick to the cameras, the security room, the fire exit: not because of ill intent, but rather to understand how everything fits together. The line between "how would I?" and "how will I?", however, is less well defined than you may think.
+There are many tasks we perform every day, most of which require very little alteration. Take killing zombies for example: There are many ways to perform the task - you can shoot them, stab them, crush them, blow them up. While you could do this yourself, why would you want to get your hands dirty? Each of these tasks can be performed by a machine much more consistently.
 
-* 
-* 
-* 
-* 
-* BioHacker - Craft the Rad Neutralisation Beacon, which disables regeneration for all irradiated zombies within a 25m radius
+* Craft the Flamethrower trap
+* Craft the Gauss Nailgun, which can repair from much further away and accelerate nails at incredible speeds 
+* Craft the Boiling Tar trap, which coats zombies in tar, slowing them and making them vulnerable to fire
+* Craft the Sniper Turret, which seeks out high value targets and headshots them from a distance
+* Craft the Decontamination Hose, which removes the regeneration from irradiated zombies that walk into it
