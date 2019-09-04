@@ -36,5 +36,17 @@
 				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.4" />
             </effect_group>
         </buff>
+
+        
+
+        <buff name="buffMinigunSpin" name_key="buffMiningForemanName" description_key="buffMiningForemanDesc" icon="ui_game_symbol_coffee" icon_color="0,255,0" icon_blink="false" hidden="false">
+            <stack_type value="effect"/>
+            <duration value="5"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$buffMinigunSpinBonus" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" target="self" cvar="$buffMinigunSpinBonus" operation="add" value="3"/>
+                <passive_effect name="RoundsPerMinute" operation="perc_add" value="@$buffMinigunSpinBonus"/>
+            </effect_group>
+        </buff>
     </append>
 </configs>

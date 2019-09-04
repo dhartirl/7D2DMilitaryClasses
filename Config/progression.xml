@@ -224,6 +224,14 @@
             </effect_group>
 
             <effect_group>
+                <requirement name="HoldingItemHasTags" tags="gun"/>
+                <passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value="0.4,0.4" level="2,5"/>
+                <passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value="0.4,0.4" level="2,5"/>
+                <passive_effect name="KickDegreesVertical" operation="perc_subtract" value="0.4,0.4" level="2,5"/>
+                <passive_effect name="KickDegreesHorizontal" operation="perc_subtract" value="0.4,0.4" level="2,5"/>
+            </effect_group>
+
+            <effect_group>
                 <effect_description level="1" desc_key="classSergeantRank1Desc"/>
                 <effect_description level="2" desc_key="classSergeantRank2Desc"/>
                 <effect_description level="3" desc_key="classSergeantRank3Desc"/>
