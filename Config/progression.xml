@@ -3,15 +3,15 @@
 
         <attribute name="attClasslist" name_key="attClassListName" desc_key="attClassListDesc" icon="ui_game_symbol_skills">
             <level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-            <level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="6"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="7"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="8"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="9"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
-            <level_requirements level="10"><requirement name="PlayerLevel" target="self" operation="GTE" value="99" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="6"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="7"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="8"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="9"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
+            <level_requirements level="10"><requirement name="PlayerLevel" target="self" operation="GTE" value="999" desc_key="goDisabled"/></level_requirements>
 
             <effect_group>
 
@@ -91,6 +91,144 @@
                 <effect_description level="3" desc_key="classJuggernautRank3Desc"/>
                 <effect_description level="4" desc_key="classJuggernautRank4Desc"/>
                 <effect_description level="5" desc_key="classJuggernautRank5Desc"/>
+            </effect_group>
+        </perk>
+
+        <perk name="classMedic" parent="skillMilitaryClasses" max_level="5" name_key="classMedicName" desc_key="classMedicDesc" icon="ui_game_symbol_pills">
+            <level_requirements level="1">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/>
+                <requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqLevel50"/>
+            </level_requirements>
+            <level_requirements level="2">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/>
+                <requirement name="PlayerLevel" operation="GTE" value="60" desc_key="reqLevel60"/>
+            </level_requirements>
+            <level_requirements level="3">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/>
+                <requirement name="PlayerLevel" operation="GTE" value="70" desc_key="reqLevel70"/>
+            </level_requirements>
+            <level_requirements level="4">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/>
+                <requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqLevel80"/>
+            </level_requirements>
+            <level_requirements level="5">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
+                <requirement name="PlayerLevel" operation="GTE" value="100" desc_key="reqLevel100"/>
+            </level_requirements>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffClassMedic" target="self">
+                    <requirement name="ProgressionLevel" progression_name="classMedic" target="self" operation="GTE" value="1"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffClassMedic" target="selfAOE" target_tags="ally,party" range="15">
+                    <requirement name="ProgressionLevel" progression_name="classMedic" target="self" operation="GTE" value="1"/>
+                </triggered_effect>
+            </effect_group>
+
+            <effect_group>
+                <effect_description level="1" desc_key="classMedicRank1Desc"/>
+                <effect_description level="2" desc_key="classMedicRank2Desc"/>
+                <effect_description level="3" desc_key="classMedicRank3Desc"/>
+                <effect_description level="4" desc_key="classMedicRank4Desc"/>
+                <effect_description level="5" desc_key="classMedicRank5Desc"/>
+            </effect_group>
+        </perk>
+
+        <perk name="classCaptain" parent="skillMilitaryClasses" max_level="5" name_key="classCaptainName" desc_key="classCaptainDesc" icon="ui_game_symbol_allies">
+            <level_requirements level="1">
+                <requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/>
+                <requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/>
+                <requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqLevel50"/>
+            </level_requirements>
+            <level_requirements level="2">
+                <requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/>
+                <requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/>
+                <requirement name="PlayerLevel" operation="GTE" value="60" desc_key="reqLevel60"/>
+            </level_requirements>
+            <level_requirements level="3">
+                <requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/>
+                <requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/>
+                <requirement name="PlayerLevel" operation="GTE" value="70" desc_key="reqLevel70"/>
+            </level_requirements>
+            <level_requirements level="4">
+                <requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/>
+                <requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/>
+                <requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqLevel80"/>
+            </level_requirements>
+            <level_requirements level="5">
+                <requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/>
+                <requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/>
+                <requirement name="PlayerLevel" operation="GTE" value="100" desc_key="reqLevel100"/>
+            </level_requirements>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffMiningForeman" target="self">
+                    <requirement name="ProgressionLevel" progression_name="classCaptain" target="self" operation="GTE" value="1"/>
+                </triggered_effect>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffMiningForeman" target="selfAOE" target_tags="ally,party" range="15">
+                    <requirement name="ProgressionLevel" progression_name="classCaptain" target="self" operation="GTE" value="1"/>
+                </triggered_effect>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffInspiringCommander" target="selfAOE" target_tags="ally,party" range="15">
+                    <requirement name="ProgressionLevel" progression_name="classCaptain" target="self" operation="GTE" value="4"/>
+                </triggered_effect>
+            </effect_group>
+
+            <effect_group>
+                <effect_description level="1" desc_key="classCaptainRank1Desc"/>
+                <effect_description level="2" desc_key="classCaptainRank2Desc"/>
+                <effect_description level="3" desc_key="classCaptainRank3Desc"/>
+                <effect_description level="4" desc_key="classCaptainRank4Desc"/>
+                <effect_description level="5" desc_key="classCaptainRank5Desc"/>
+            </effect_group>
+        </perk>
+
+        <perk name="classSergeant" parent="skillMilitaryClasses" max_level="5" name_key="classSergeantName" desc_key="classSergeantDesc" icon="ui_game_symbol_pills">
+            <level_requirements level="1">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/>
+                <requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqLevel50"/>
+            </level_requirements>
+            <level_requirements level="2">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/>
+                <requirement name="PlayerLevel" operation="GTE" value="60" desc_key="reqLevel60"/>
+            </level_requirements>
+            <level_requirements level="3">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/>
+                <requirement name="PlayerLevel" operation="GTE" value="70" desc_key="reqLevel70"/>
+            </level_requirements>
+            <level_requirements level="4">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/>
+                <requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqLevel80"/>
+            </level_requirements>
+            <level_requirements level="5">
+                <requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/>
+                <requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/>
+                <requirement name="PlayerLevel" operation="GTE" value="100" desc_key="reqLevel100"/>
+            </level_requirements>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffIntimidating" target="selfAOE" target_tags="enemy" range="15">
+                    <requirement name="ProgressionLevel" progression_name="classSergeant" target="self" operation="GTE" value="1"/>
+                </triggered_effect>
+            </effect_group>
+
+            <effect_group>
+                <effect_description level="1" desc_key="classSergeantRank1Desc"/>
+                <effect_description level="2" desc_key="classSergeantRank2Desc"/>
+                <effect_description level="3" desc_key="classSergeantRank3Desc"/>
+                <effect_description level="4" desc_key="classSergeantRank4Desc"/>
+                <effect_description level="5" desc_key="classSergeantRank5Desc"/>
             </effect_group>
         </perk>
 

@@ -1,0 +1,40 @@
+<configs>
+
+    <append xpath="/buffs">
+
+        <buff name="buffClassMedic" name_key="buffClassMedicName" description_key="buffClassMedicDesc" icon="ui_game_symbol_pills" icon_color="0,255,0" icon_blink="false" hidden="false">
+            <stack_type value="replace"/>
+            <duration value="5"/>
+            <effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.2"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffMiningForeman" name_key="buffMiningForemanName" description_key="buffMiningForemanDesc" icon="ui_game_symbol_mining" icon_color="0,255,0" icon_blink="false" hidden="false">
+            <stack_type value="replace"/>
+            <duration value="5"/>
+            <effect_group>
+				<passive_effect name="BlockDamage" operation="perc_add" value="0.3"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffInspiringCommander" name_key="buffInspiringCommanderName" description_key="buffInspiringCommanderDesc" icon="ui_game_symbol_allies" icon_color="0,255,0" icon_blink="false" hidden="false">
+            <stack_type value="replace"/>
+            <duration value="5"/>
+            <effect_group>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1" />
+				<passive_effect name="AttributeLevel" tags="attIntelligence" operation="base_add" value="1" />
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1" />
+            </effect_group>
+        </buff>
+
+        <buff name="buffIntimidating" name_key="buffIntimidatingName" description_key="buffIntimidatingDesc" icon="ui_game_symbol_allies" icon_color="255,0,0" icon_blink="false" hidden="false">
+            <stack_type value="replace"/>
+            <duration value="5"/>
+            <effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.4" />
+            </effect_group>
+        </buff>
+    </append>
+</configs>
